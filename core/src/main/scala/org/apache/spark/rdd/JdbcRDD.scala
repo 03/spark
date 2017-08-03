@@ -90,11 +90,12 @@ class JdbcRDD[T: ClassTag](
       // dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-implementation-notes.html
 
       stmt.setFetchSize(Integer.MIN_VALUE)
-    } else {
-      stmt.setFetchSize(100)
     }
+//     else {
+//       stmt.setFetchSize(100)
+//     }
 
-    logInfo(s"statement fetch size set to: ${stmt.getFetchSize}")
+    logInfo(s"Luke Skywalker's Jedi - statement fetch size set to: ${stmt.getFetchSize}")
 
     stmt.setLong(1, part.lower)
     stmt.setLong(2, part.upper)
